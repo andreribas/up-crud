@@ -7,12 +7,12 @@ class GameRepository
     public static function create(Game $game)
     {
         $db = DB::getDB();
-        $stmt = $db->prepare('INSERT INTO game (name, description, category, release_year, created_at) VALUES (:name, :description, :category, :release_year, :created_at)');
+        $stmt = $db->prepare('INSERT INTO game (name, description, category, release_year) VALUES (:name, :description, :category, :release_year)');
         return $stmt->execute([
-            ':name', $game->name,
-            ':description', $game->description,
-            ':category', $game->category,
-            ':release_year', $game->release_year,
+            ':name' => $game->name,
+            ':description' => $game->description,
+            ':category' => $game->category,
+            ':release_year' => $game->release_year,
         ]);
     }
 
