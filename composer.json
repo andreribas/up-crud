@@ -1,0 +1,17 @@
+{
+    "name": "andreribas/up-crud",
+    "description": "Andre Ribas's UP PHP CRUD project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "André Ribas",
+            "email": "andreribas@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "andreribas\\": "lib"
+        }
+    }
+}
